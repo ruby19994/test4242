@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>購物車</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/cart.css">
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+   <script src="assets/js/header.js"></script>
+    <!-- header/end -->
+    <!-- 購物車/start -->
+    <section class="page-content">
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <!-- 產品清單/start -->
+                <div class="col-12 mb-3" style="margin:5% 0% 0% 0%">
+                    <h2 style="color: #fff">購物車</h2>
+                    <div class="table-responsive-sm table-middle">
+                        <table class="table table-bordered" style="background-color: white;">
+                            <thead >
+                                <tr>
+                                    
+                                    <th scope="col" class="product-thumbnail ">產品種類</th>
+                                    <th scope="col" class="product-name">內容</th>
+                                    <th scope="col" class="product-price">價格</th>
+                                    <th scope="col" class="product-quantity">數量</th>
+                                    <th scope="col" class="product-subtotal">總計</th>
+                                    <th scope="col" class="product-remove">移除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="product-thumbnail" style="vertical-align: middle">
+                                        
+                                            豆花花花花花花
+                                        
+                                    </td>
+                                    <td class="product-name" style="vertical-align: middle" >
+                                        配料:紅豆、芋頭、珍珠<br>湯底:手炒黑糖
+                                    </td>
+                                    <td class="product-price" style="vertical-align: middle">NT$&nbsp;30</td>
+                                    <td class="product-quantity" style="vertical-align: middle">
+                                        <input type="number" value="1" min="1" max="50">
+                                    </td>
+                                    <td class="product-subtotal" style="vertical-align: middle">NT$&nbsp;30</td>
+                                    <td class="product-remove" style="vertical-align: middle">
+                                        <button type="submit" class="remove">X</button>
+                                    </td>
+                                </tr>
+                               <tr>
+                                    <td class="product-thumbnail " style="vertical-align: middle">
+                                        
+                                            豆花花花花花花
+                                        
+                                    </td>
+                                    <td class="product-name" style="vertical-align: middle" >
+                                        配料:紅豆、芋頭、珍珠<br>湯底:手炒黑糖
+                                    </td>
+                                    <td class="product-price" style="vertical-align: middle">NT$&nbsp;30</td>
+                                    <td class="product-quantity" style="vertical-align: middle">
+                                        <input type="number" value="1" min="1" max="50">
+                                    </td>
+                                    <td class="product-subtotal" style="vertical-align: middle">NT$&nbsp;30</td>
+                                    <td class="product-remove" style="vertical-align: middle">
+                                        <button type="submit" class="remove">X</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product-thumbnail" style="vertical-align: middle">
+                                        
+                                            豆花花花花花花
+                                        
+                                    </td>
+                                    <td class="product-name" style="vertical-align: middle" >
+                                        配料:紅豆、芋頭、珍珠<br>湯底:手炒黑糖
+                                    </td>
+                                    <td class="product-price" style="vertical-align: middle">NT$&nbsp;30</td>
+                                    <td class="product-quantity" style="vertical-align: middle">
+                                        <input type="number" value="1" min="1" max="50">
+                                    </td>
+                                    <td class="product-subtotal" style="vertical-align: middle">NT$&nbsp;30</td>
+                                    <td class="product-remove" style="vertical-align: middle">
+                                        <button type="submit" class="remove">X</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 產品清單/end -->
+                
+                <!-- 產品統計/start -->
+                <div class="col-12 col-md-6 mb-5" >
+                    
+                    <div class="table-responsive-sm">
+                        <table class="table table-bordered" style="background-color: white">
+                        <thead>
+                                <tr>
+                                    <th colspan="2">購物車總計</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>總計</td>
+                                    <td>NT$&nbsp;90</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">
+                                        <button onclick="document.getElementById('check_out').style.display='block'"  class="check_out">確認結帳</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <!-- 產品統計/end -->
+                <div id="check_out" class="check_out_modal ">
+            <form class="check_out_modal-content animate" action="">
+            <div class="imgcontainer">
+             <h2 >結帳資訊</h2>
+            </div>
+
+            <div class="container">
+            <table>
+            <tr>
+            <td class="td_label"><label >收件人Recipient</label></td>
+            <td ><input  type="text" name="uname" placeholder="輸入收件人姓名" class="check_out" ></td>
+            </tr>
+            <tr>
+            <td class="td_label"><label >信箱 E-mail</label></td>
+            <td ><input type="email"  placeholder="輸入信箱" name="email" class="check_out"></td>
+            </tr>
+            <tr>
+            <td class="td_label"><label for="tel">電話 Tel/Phone</label></td>
+            <td ><input type="tel"  placeholder="輸入電話" name="tel" class="check_out"></td>
+            </tr>
+            <tr>
+            <td class="td_label"><label >取貨方式 Pick up</label></td>
+            <td ><input type="radio"   name="pick_up" id="store" required>來店取貨 &nbsp;<input type="radio" name="pick_up" id="sent" required>外送</td>
+            </tr>
+            <tr>
+            <td class="td_label"><label >付款方式 Payment</label></td>
+            <td ><input type="radio"   name="pay" id="card" required>刷卡 &nbsp;<input type="radio" name="pay" id="cash" required>現金</td>
+            </tr>
+            </table>
+            <div class="imgcontainer">
+             <h2 >訂單資訊</h2>
+            </div>
+            <table>
+            <tr>
+            <th>商品</th>
+            <th>總計</th>
+            </tr>
+            <tr>
+            <td>豆花</td>
+            <td>NT$ &nbsp;90</td>
+            </tr>
+            <tr>
+            <td>飲品</td>
+            <td>NT$&nbsp;25</td>
+            </tr>
+            <tr>
+            <td class="total">總計</td>
+            <td class="total">NT$&nbsp;115</td>
+            </tr>
+            </table>
+            <button type="submit" class="check_out">結帳</button>
+            <button type="button" onclick="document.getElementById('check_out').style.display='none'"  class="check_out">取消結帳</button>
+            </div>
+        </form>
+        </div>
+            </div>
+        </div>
+    </section>
+    <!-- 購物車/end -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({trigger: "click"});
+        })
+        var modal = document.getElementById('check_out');
+        //點空白關閉
+        window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+        }
+    </script>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>
