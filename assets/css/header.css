@@ -24,12 +24,12 @@
 	background-repeat:no-repeat;
 	min-width: 100vw;
 }
-/*.header-class{
+.header-class{
 	min-height:100vh;
 	background-image:url(images/banner.jpg);
 	background-size:cover;
 	background-position:center center;
-}*/
+}
 .navbar-dark.bg-dark{
 	background-color:#000000;
 }
@@ -41,7 +41,6 @@
 #label{
 	text-align: left;
 }
-/*登入登出 */
 input.text, input.psw {
   width: 100%;
   padding: 12px 20px;
@@ -101,7 +100,6 @@ span.psw {
 .modal {
   display: none; 
   position: fixed; 
-  z-index: 1; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -117,7 +115,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; 
   border: 1px solid #888;
-  width: 80%; 
+  width: 50%; 
 }
 
 
@@ -165,4 +163,9 @@ span.psw {
 .footer{
 	background-color:#272727;
 	color:#ffffff;
+}
+#num_visit{
+  position:relative;
+  right:5px;
+  bottom:-25px;
 }

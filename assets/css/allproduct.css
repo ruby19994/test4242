@@ -18,7 +18,7 @@ border: 1pt #5d533d solid;
 /*商品種類選擇*/
 div.product_type
 {
-	font-size: 50pt;
+	font-size: 50px;
 	color: white;
 	background-color: #303030;
 	
@@ -53,6 +53,10 @@ width: 10%;
 height: 10%;
 border-radius: 15%;
 border:5pt  #ffffff solid;
+}
+img.product_pic:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 * {
   box-sizing: border-box;

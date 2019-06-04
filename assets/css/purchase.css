@@ -39,11 +39,16 @@ width:15%;
 /*單個商品圖片*/
 img.product_pic
 {
-margin: 2%;
-width: 10%;
-height: 10%;
+margin: 1%;
+width: 120px;
+height: 120px;
 border-radius: 15px;
 border:3px  #ffffff solid;
+}
+
+.qbtn{
+	height:300px;
+	width:400px;
 }
 .pro_img{
 	margin: 2%;
@@ -63,6 +68,31 @@ border:3px  #ffffff solid;
   position:relative;
   bottom:30px;
   right:-20px;
+  padding:1px;
+  background-color:#000000;
+  font-size:18px;
+  border-radius:10px;
+  width:80px;
+  color:#ffffff;
+  font-family:微軟正黑體;
+  font-weight:bold;
+}
+.submit_1{
+  position:relative;
+  right:-435px;
+  bottom:15px;
+  padding:1px;
+  background-color:#000000;
+  font-size:18px;
+  border-radius:10px;
+  width:80px;
+  color:#ffffff;
+  font-family:微軟正黑體;
+  font-weight:bold;
+}
+.submit_2{
+  position:relative;
+  right:-15px;
   padding:1px;
   background-color:#000000;
   font-size:18px;
@@ -98,8 +128,8 @@ label{
 /*加入購物車按鈕*/
 .add_cart{
 	position:relative;
-	left:-160px;
-	bottom:-40px;
+	bottom:-50px;
+	left:-100px;
 	background-color:#000000;
 	border-radius:10px;
 	font-size:15px;
@@ -110,41 +140,178 @@ label{
     padding:1px;
 }
 
-/*數量增減按鈕*/
-*{
-	box-sizing:border-box;
+
+/*增減按鈕*/
+.qty {
+  width: 40px;
+  height: 35px;
+  text-align: center;
+  border: 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
-.input-number{
-	width:150px;
-	padding:0 12px;
-	text-align:center;
-	outline:none;
+input.qtyplus {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
 }
-.input-number,.input-number-decrement,
-.input-number-increment{
-	border:2px solid #ffffff;
-	height:40px;
-	user-select:none;
+input.qtyplus1 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
 }
-.input-number-decrement,.input-number-increment{
-	display:inline-block;
-	width:30px;
-	line-height:38px;
-	background:#000000;
-	color:#ffffff;
-	text-align:center;
-	font-weight:bold;
-	cursor:pointer;
+input.qtyplus2 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
 }
-.input-number-decrement:active,
-.input-number-increment:active{
-	background:#dddddd;
+input.qtyplus3 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
 }
-.input-number-decrement{
-	border-right:none;
-	border-radius:0px 0 0 0px;
+input.qtyplus4 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
 }
-.input-number-increment{
-    border-left:none;
-	border-radius:0 0px 0px 0;
+input.qtyplus5 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
 }
+
+input.qtyplus6 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
+}
+input.qtyplus_1 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
+}
+input.qtyplus_2 {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-left:none;
+}
+input.qtyminus{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus1{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus2{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus3{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus4{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus5{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus6{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus_1{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+input.qtyminus_2{
+	width: 25px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  background: #000000;
+  color:#ffffff;
+  font-weight:bold;
+  border-right:none;
+}
+
+

@@ -122,29 +122,213 @@ function onSubmitVote1()
 		alert("提交成功");
 	}
 }
-/*數量增減*/
-(function(){
-	window.inputNumber=function(el){
-		var min =el.attr('min')||false;
-		var max =el.attr('max')||false;
 
-		var els={};
-		els.dec = el.prev();
-		els.inc = el.next();
-		el.each(function(){
-			init($(this));
-		});
-		function init(el){
-			els.dec.on('click',decrement);
-			els.inc.on('click',increment);
-			function decrement(){
-				var value = el[0].value;
-				value--;
-				if(!min||value>=min){
-					el[0].value=value;
-				}			
-			}
-		}
-	}
-})();
-inputNumber($('.input-number'));
+<!--test-->
+$(function() {
+
+  $('.qtyplus').click(function(e) {
+    e.preventDefault();
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName + ']').val(0);
+    }
+  });
+  $(".qtyminus").click(function(e) {
+    e.preventDefault();
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName + ']').val(0);
+    }
+  });
+});
+<!--test1-->
+
+$(function() {
+  $('.qtyplus1').click(function(e1) {
+    e1.preventDefault();
+    fieldName1 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName1 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName1 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName1 + ']').val(0);
+    }
+  });
+  $(".qtyminus1").click(function(e1) {
+    e1.preventDefault();
+    fieldName1 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName1 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName1 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName1 + ']').val(0);
+    }
+  });
+});
+<!--test2-->
+$(function() {
+  $('.qtyplus2').click(function(e2) {
+    e2.preventDefault();
+    fieldName2 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName2 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName2 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName2 + ']').val(0);
+    }
+  });
+  $(".qtyminus2").click(function(e2) {
+    e2.preventDefault();
+    fieldName2 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName2 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName2 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName2 + ']').val(0);
+    }
+  });
+});
+<!--test3-->
+$(function() {
+  $('.qtyplus3').click(function(e3) {
+    e3.preventDefault();
+    fieldName3 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName3 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName3 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName3 + ']').val(0);
+    }
+  });
+  $(".qtyminus3").click(function(e3) {
+    e3.preventDefault();
+    fieldName3 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName3 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName3 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName3 + ']').val(0);
+    }
+  });
+});
+<!--test4-->
+$(function() {
+  $('.qtyplus4').click(function(e4) {
+    e4.preventDefault();
+    fieldName4 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName4 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName4 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName4 + ']').val(0);
+    }
+  });
+  $(".qtyminus4").click(function(e4) {
+    e4.preventDefault();
+    fieldName4 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName4 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName4 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName4 + ']').val(0);
+    }
+  });
+});
+<!--test5-->
+$(function() {
+  $('.qtyplus5').click(function(e5) {
+    e5.preventDefault();
+    fieldName5 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName5 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName5 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName5 + ']').val(0);
+    }
+  });
+  $(".qtyminus5").click(function(e5) {
+    e5.preventDefault();
+    fieldName5 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName5 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName5 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName5 + ']').val(0);
+    }
+  });
+});
+<!--test6-->
+$(function() {
+  $('.qtyplus6').click(function(e6) {
+    e6.preventDefault();
+    fieldName6 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName6 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName6 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName6 + ']').val(0);
+    }
+  });
+  $(".qtyminus6").click(function(e6) {
+    e6.preventDefault();
+    fieldName6 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName6 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName6 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName6 + ']').val(0);
+    }
+  });
+});
+<!--test_1-->
+$(function() {
+  $('.qtyplus_1').click(function(a) {
+    a.preventDefault();
+    fieldName_1 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName_1 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName_1 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName_1 + ']').val(0);
+    }
+  });
+  $(".qtyminus_1").click(function(a) {
+    a.preventDefault();
+    fieldName_1 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName_1 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName_1 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName_1 + ']').val(0);
+    }
+  });
+});
+<!--test_2-->
+$(function() {
+  $('.qtyplus_2').click(function(b) {
+    b.preventDefault();
+    fieldName_2 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName_2 + ']').val());
+    if (!isNaN(currentVal)) {
+      $('input[name=' + fieldName_2 + ']').val(currentVal + 1);
+    } else {
+      $('input[name=' + fieldName_2 + ']').val(0);
+    }
+  });
+  $(".qtyminus_2").click(function(b) {
+    b.preventDefault();
+    fieldName_2 = $(this).attr('field');
+    var currentVal = parseInt($('input[name=' + fieldName_2 + ']').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      $('input[name=' + fieldName_2 + ']').val(currentVal - 1);
+    } else {
+      $('input[name=' + fieldName_2 + ']').val(0);
+    }
+  });
+});

@@ -17,18 +17,22 @@
 	</head>
 	
 
-	<body>
+	<body >
+	<script> 
+	confirm(
+		"情豆初開--選購注意事項\n1.上方選擇列選擇欲購買之產品類別\n2.單筆選購上限為50單位\n3.豆花價格依選擇湯底計價\n4.其餘單品皆為30元\n5.豆花配料選擇限制3種\n6.冰品配料選擇限制4種\n7.選購完成，記得前往購物車結帳，完成訂單！！！\n情豆初開--祝你選購愉快");
+	</script>
 	<!--頁首選單end-->
 	<!--種類分頁選單start-->
 		<div class="w3-container">
 			<div class="type clearfix">
 				<div class="product_type" >
-					<button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'bean_flower')">豆花</button>
-					<button class="w3-bar-item w3-button tablink" onclick="openCity(event,'drink_soup')">單品</button>
-					<button class="w3-bar-item w3-button tablink" onclick="openCity(event,'ice')">冰品</button>
+					<button class="w3-bar-item w3-button tablink w3-red" onclick="openType(event,'bean_flower')">豆花</button>
+					<button class="w3-bar-item w3-button tablink" onclick="openType(event,'drink_soup')">單品</button>
+					<button class="w3-bar-item w3-button tablink" onclick="openType(event,'ice')">冰品</button>
 				</div><br>
 				
-				<div id="bean_flower" class="w3-container w3-border city">
+				<div id="bean_flower" class="w3-container w3-border Type">
 					<!--豆花區--> 
 					<a href="allproduct.html"><img src="assets/img/bean_flower.png" class="type"></a>
 					<div class="one_product"><!--商品選擇區-->
@@ -38,7 +42,7 @@
 						<label for="a2"><div  class="pro"><img src="assets/img/twobfb.jpg" class="pro_img"> </div><input type="radio" id="a2" value="value2" name="bean" /> </label>
 						<label for="a3"><div class="pro"><img src="assets/img/buding.jpg" class="pro_img"> </div><input type="radio" id="a3" value="value2" name="bean" /> </label>
 
-						<input type="submit" value="下一步" class="submit" href="#ingredient" onclick="">
+						<a href="#ingredient"><input type="button" value="下一步" class="submit" onclick=""></a>
 						</form>
 
 					</div>
@@ -47,7 +51,7 @@
 					<div class="one_product" id="ingredient"><!--商品選擇區-->
 						<!-- 配料-->
 						<form>
-						<label for="a"><div class="pro"><img src="assets/img/green_bean.jpg" class="pro_img"> </div><input type="checkbox" id="a" checked value="value1" name="sample" onClick="onCheckBox(this);"/> </label>
+						<label for="a"><div class="pro"><img src="assets/img/green_bean.jpg" class="pro_img"> </div><input type="checkbox" id="a"  value="value1" name="sample" onClick="onCheckBox(this);"/> </label>
 
 						<label for="b"><div class="pro"><img src="assets/img/flower_born.jpg" class="pro_img"> </div><input type="checkbox" id="b" value="value2" name="sample" onClick="onCheckBox(this);"/> </label>
 						<label for="c"><div class="pro"><img src="assets/img/oneperson.jpg" class="pro_img"> </div><input type="checkbox" id="c" value="value3" name="sample" onClick="onCheckBox(this);"/> </label>
@@ -59,7 +63,7 @@
 						<label for="i"><div class="pro"><img src="assets/img/taro.jpg" class="pro_img"> </div><input type="checkbox" id="i" value="value9" name="sample" onClick="onCheckBox(this);"/> </label>
 						<label for="j"><div class="pro"><img src="assets/img/taro_circle.jpg" class="pro_img"> </div><input type="checkbox" id="j" value="value10" name="sample" onClick="onCheckBox(this);"/> </label>
 						<label for="k"><div class="pro"><img src="assets/img/god_grass.jpg" class="pro_img"> </div><input type="checkbox" id="k" value="value11" name="sample" onClick="onCheckBox(this);"/> </label>
-                        <input type="button" class="submit" class="submit_vote" name="submit_vote" value="下一步" onClick="onSubmitVote()" href="#shop" />
+                        <a href="#shop"><input type="button" class="submit"  name="submit_vote" value="下一步" onClick="onSubmitVote()"  ></a>
                         </form>
 
 						<!--商品照片-->
@@ -74,74 +78,90 @@
 						<label for="b3"><div><img src="assets/img/strong_beanwater.jpg" class="pro_img"> </div><input type="radio" id="b3" value="value3" name="bean" />45元</label>
 						<label for="b4"><div><img src="assets/img/nosugar_beanwater.jpg" class="pro_img"> </div><input type="radio" id="b4" value="value4" name="bean" />45元</label>
 						<label for="b5"><div><img src="assets/img/milk_beanwater.jpg" class="pro_img"> </div><input type="radio" id="b5" value="value5" name="bean" />50元</label>
-
-						<input type="submit" value="完成購買" class="submit" href="#ingredient" onclick="">
+                        <!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus_1' field='quantity_1' />
+                        <input type='text' name='quantity_1' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus_1' field='quantity_1' />
+						<input type="submit" value="完成購買" class="submit_1" href="#ingredient" onclick="">
 						</form>
 						<!--商品照片-->
 					</div>
 				</div>
 			
 		
-				<div id="drink_soup" class="w3-container w3-border city" style="display:none">
+				<div id="drink_soup" class="w3-container w3-border Type" style="display:none">
 					<!--飲品-->
 					<a href="allproduct.html"><img src="assets/img/drink.png" class="type"></a>
 					<div class="one_product"><!--商品選擇區-->
+					<!--商品照片-->
+						
+						<a href="product_info.html"><img src="assets/img/blacksugar_fire.jpg" class="product_pic"></a>
+                        <!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus' field='quantity' />
+                        <input type='text' name='quantity' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus' field='quantity' />
+                        <input type="submit" class="add_cart" value="加入購物車">
 						<a href="product_info.html"><img src="assets/img/blacksugar_milk.jpg" class="product_pic"></a>
-						<span class="input-number-decrement">-</span>
-						<input class="input-number" type="text" value="1" min="0" max="100">
-						<span class="input-number-increment">+</span>
-						<input type="button" class="add_cart" value="加入購物車">
+                        <!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus1' field='quantity1' />
+                        <input type='text' name='quantity1' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus1' field='quantity1' />
+                        <input type="submit" class="add_cart" value="加入購物車">
 						<a href="product_info.html"><img src="assets/img/strong_beanwater.jpg" class="product_pic"></a>
-						<span class="input-number-decrement">-</span>
-						<input class="input-number" type="text" value="1" min="0" max="100">
-						<span class="input-number-increment">+</span>
-						<input type="button" class="add_cart" value="加入購物車">
+						<!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus2' field='quantity2' />
+                        <input type='text' name='quantity2' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus2' field='quantity2' />
+						<input type="submit" class="add_cart" value="加入購物車">
 						<a href="product_info.html"><img src="assets/img/nosugar_beanwater.jpg" class="product_pic"></a>
-						<span class="input-number-decrement">-</span>
-						<input class="input-number" type="text" value="1" min="0" max="100">
-						<span class="input-number-increment">+</span>
-						<input type="button" class="add_cart" value="加入購物車">
+						<!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus3' field='quantity3' />
+                        <input type='text' name='quantity3' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus3' field='quantity3' />
+						<input type="submit" class="add_cart" value="加入購物車">
 						<a href="product_info.html"><img src="assets/img/milk_beanwater.jpg" class="product_pic"></a>
-						<span class="input-number-decrement">-</span>
-						<input class="input-number" type="text" value="1" min="0" max="100">
-						<span class="input-number-increment">+</span>
-						<input type="button" class="add_cart" value="加入購物車">
+						<!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus4' field='quantity4' />
+                        <input type='text' name='quantity4' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus4' field='quantity4' />
+						<input type="submit" class="add_cart" value="加入購物車">
 						<!--商品照片-->
 					</div>
 					<!--湯品區-->
 					<a href="allproduct.html"><img src="assets/img/hotsoup.png" class="type"></a>
 					<div class="one_product"><!--商品選擇區-->
 						<a href="product_info.html"><img src="assets/img/redbean_milk.jpg" class="product_pic"></a>
-						<span class="input-number-decrement">-</span>
-						<input class="input-number" type="text" value="1" min="0" max="100">
-						<span class="input-number-increment">+</span>
-						<input type="button" class="add_cart" value="加入購物車"> 
+						<!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus5' field='quantity5' />
+                        <input type='text' name='quantity5' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus5' field='quantity5' />
+						<input type="submit" class="add_cart" value="加入購物車"> 
 						<a href="product_info.html"><img src="assets/img/redbean_soup.jpg" class="product_pic"></a>
-						<span class="input-number-decrement">-</span>
-						<input class="input-number" type="text" value="1" min="0" max="100">
-						<span class="input-number-increment">+</span>
-						<input type="button" class="add_cart" value="加入購物車"> 
+						<!--增減按鈕--> 
+                        <input type='button' value='-' class='qtyminus6' field='quantity6' />
+                        <input type='text' name='quantity6' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus6' field='quantity6' />
+						<input type="submit" class="add_cart" value="加入購物車"> 
 						<!--商品照片-->
 					</div>
 				</div>
 					<!--冰品區-->
-				<div id="ice" class="w3-container w3-border city" style="display:none">
+				<div id="ice" class="w3-container w3-border Type" style="display:none">
 					<a href="allproduct.html"><img src="assets/img/ice.png" class="type"></a>
 					<div class="one_product"><!--商品選擇區-->
 						<form> 
 						<label for="c1"><div class="pro"><img src="assets/img/ice.jpg" class="pro_img"> </div><input type="radio" id="c1" value="value1" name="bean" /> </label>
 						<label for="c2"><div  class="pro"><img src="assets/img/milk_ice.jpg" class="pro_img"> </div><input type="radio" id="c2" value="value2" name="bean" /> </label>
 
-						<input type="submit" value="下一步" class="submit" href="#ice_pro" onclick="">
+						<a href="#ice_pro"><input type="button" value="下一步" class="submit"  onclick=""></a>
 						</form>
 						<!--商品照片-->
 					</div>
 					<!--配料-->
 					<a href="allproduct.html"><img src="assets/img/with.png" class="type"></a>
-					<div class="one_product" id="#ice_pro"><!--商品選擇區-->
+					<div class="one_product" id="ice_pro"><!--商品選擇區-->
 						<form>
-						<label for="d1"><div class="pro"><img src="assets/img/green_bean.jpg" class="pro_img"> </div><input type="checkbox" id="d1" checked value="value1" name="sample1" onClick="onCheckBox(this);"/> </label>
-
+						<label for="d1"><div class="pro"><img src="assets/img/green_bean.jpg" class="pro_img"> </div><input type="checkbox" id="d1"  value="value1" name="sample1" onClick="onCheckBox(this);"/> </label>
 						<label for="d2"><div class="pro"><img src="assets/img/flower_born.jpg" class="pro_img"> </div><input type="checkbox" id="d2" value="value2" name="sample1" onClick="onCheckBox(this);"/> </label>
 						<label for="d3"><div class="pro"><img src="assets/img/oneperson.jpg" class="pro_img"> </div><input type="checkbox" id="d3" value="value3" name="sample1" onClick="onCheckBox(this);"/> </label>
 						<label for="d4"><div class="pro"><img src="assets/img/pearl.jpg" class="pro_img"> </div><input type="checkbox" id="d4" value="value4" name="sample1" onClick="onCheckBox(this);"/> </label>
@@ -152,7 +172,10 @@
 						<label for="d9"><div class="pro"><img src="assets/img/taro.jpg" class="pro_img"> </div><input type="checkbox" id="d9" value="value9" name="sample1" onClick="onCheckBox(this);"/> </label>
 						<label for="d10"><div class="pro"><img src="assets/img/taro_circle.jpg" class="pro_img"> </div><input type="checkbox" id="d10" value="value10" name="sample1" onClick="onCheckBox(this);"/> </label>
 						<label for="d11"><div class="pro"><img src="assets/img/god_grass.jpg" class="pro_img"> </div><input type="checkbox" id="d11" value="value11" name="sample1" onClick="onCheckBox(this);"/> </label>
-                        <input type="button" class="submit" id="submit_vote1" name="submit_vote1" value="完成購買" onClick="onSubmitVote1()" />
+						<input type='button' value='-' class='qtyminus_2' field='quantity_2' />
+                        <input type='text' name='quantity_2' value='0' class='qty' />
+                        <input type='button' value='+' class='qtyplus_2' field='quantity_2' />
+                        <input type="button" class="submit_2" name="submit_vote1" value="完成購買" onClick="onSubmitVote1()" />
                         </form>
 						<!--商品照片-->
 					</div>
